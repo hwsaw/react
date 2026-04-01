@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { type ReactNode } from 'react'
 
 type ButtonType = {
-    handleClick: () => void
-    handleMouseEnter: () => void
+    handleClick?: () => void,
+    children: ReactNode
 }
 
 const Button: React.FunctionComponent<ButtonType> = ({ ...props }) => {
     return (
         <>
-            <button onClick={props.handleClick} onMouseEnter={props.handleMouseEnter}>
-                Button
+            <button onClick={props.handleClick}>
+                { props.children }
             </button>
         </>
     )

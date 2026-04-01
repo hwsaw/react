@@ -6,9 +6,9 @@ type HeaderProps = {
 
 const Header: React.FunctionComponent<HeaderProps> = ({ children }) => {
     return (
-        <>
+        <div>
             { children }
-        </>
+        </div>
     )
 }
 
